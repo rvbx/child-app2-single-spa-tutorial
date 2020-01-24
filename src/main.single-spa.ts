@@ -17,7 +17,8 @@ const lifecycles = singleSpaAngular({
     return platformBrowserDynamic().bootstrapModule(AppModule);
   },
   template: '<child-app1 />',
-  NgZone
+  NgZone,
+  domElementGetter: () => document.getElementById('app-wrapper')
 });
 
 export const bootstrap = lifecycles.bootstrap;
