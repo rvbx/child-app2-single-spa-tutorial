@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port=4201",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve:single-spa": "ng run app1:single-spa-serve --disable-host-check --port=4301 --deploy-url=http://localhost:4301/ --live-reload=false"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
+    "single-spa-angular": "^3.1.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
