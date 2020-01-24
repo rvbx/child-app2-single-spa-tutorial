@@ -8,7 +8,7 @@ import { EmptyRouteComponent } from './empty-route/empty-route.component';
 
 const ROUTES_MICRO_APP: Routes = [
   {
-    path: 'app1',
+    path: 'app2',
     component: Example1Component
   },
   {
