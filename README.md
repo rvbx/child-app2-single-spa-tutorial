@@ -1,10 +1,18 @@
-# App1
+# Child-App2-single-spa-tutorial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4202/`. The app will automatically reload if you change any of the source files.
+
+## Single-spa Development server
+
+You need to have the base app and child-app1. Links below to clone and install:
+BASE-APP: https://github.com/rodolfo-boas/base-app-single-spa-tutorial
+CHILD-APP1: https://github.com/rodolfo-boas/child-app1-single-spa-tutorial
+
+Run `npm start` on base-app and then run `npm run serve:single-spa` on app1 and app2. Navigate to `http://localhost:4200/`.
 
 ## Code scaffolding
 
