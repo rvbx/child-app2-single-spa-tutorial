@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "document-register-element": "^1.14.3",
     "rxjs": "~6.3.3",
     "single-spa-angular": "^3.1.0",
     "tslib": "^1.9.0",

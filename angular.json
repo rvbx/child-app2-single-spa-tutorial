@@ -104,6 +104,41 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "single-spa": {
+          "builder": "single-spa-angular:build",
+          "options": {
+            "outputPath":"dist/app1",
+            "index": "src/index.html",
+            "main": "src/main.single-spa.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ],
+            "es5BrowserSupport": true
+          }
+        },
+        "single-spa-serve": {
+          "builder": "single-spa-angular:dev-server",
+          "options": {
+            "browserTarget": "app1:single-spa",
+            "port": 4301
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "app1:build:production"
+            }
+          }
         }
       }
     },
