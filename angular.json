@@ -10,7 +10,7 @@
       "prefix": "child",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "architect": {
@@ -108,7 +108,7 @@
         "single-spa": {
           "builder": "single-spa-angular:build",
           "options": {
-            "outputPath":"dist/app2",
+            "outputPath": "dist/app2",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -126,6 +126,33 @@
               }
             ],
             "es5BrowserSupport": true
+          },
+          "configurations": {
+            "prod": {
+              "outputPath": "dist/app2",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
           }
         },
         "single-spa-serve": {
