@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'brad-example1',
+  selector: 'rvbx-example1',
   templateUrl: './example1.component.html',
   styleUrls: ['./example1.component.scss']
 })
